@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "./Header";
 import "./Design.css";
 import { Link } from "react-router-dom";
-import search from "src/assets/search.png";
+import search from "../assets/search.png";
 import star from "../assets/icon-star.svg";
 import clock from "../assets/icon-star.svg";
 import fullstop from "../assets/full-stop.png";
