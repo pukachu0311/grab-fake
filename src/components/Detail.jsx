@@ -83,7 +83,7 @@ const Detail = () => {
               tab={<span className="tab-title">Món ăn kèm</span>}
               key="tab3"
             >
-              <div> This is a content of Tab3</div>
+              <div> </div>
             </Tabs.TabPane>
           </Tabs>
         </div>

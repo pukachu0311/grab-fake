@@ -5,7 +5,7 @@ import React from "react";
 import logo2 from "../assets/logo-grabfood2.svg";
 import logo1 from "../assets/logo-grabfood-white.svg";
 import "./Design.css";
-
+import cart from "../assets/icon-cart-default-black.svg";
 const Navbar = () => {
   const [color, setColor] = useState(false);
   const [logoSrc, setLogoSrc] = useState(logo1);
@@ -36,7 +36,7 @@ const Navbar = () => {
               type="button"
               className="btn btn-light"
             >
-              <img src="src/assets/icon-cart-default-black.svg" alt="Cart" />
+              <img src={cart} alt="Cart" />
             </button>
             <button
               style={{

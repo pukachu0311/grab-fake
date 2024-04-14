@@ -1,5 +1,8 @@
 import React from "react";
-
+import tw from "../assets/twitter.png";
+import fb from "../assets/facebook.png";
+import ig from "../assets/instagram.png";
+import logo from "../assets/logo-grabfood-white.svg";
 import "./Design.css";
 
 const Footer = () => {
@@ -11,7 +14,7 @@ const Footer = () => {
             <div class="row">
               <div class="col">
                 <article>
-                  <img src="src/assets/bottom-food-options.svg" />
+                  <img src="https://food.grab.com/static/page-home/bottom-food-options.svg" />
                   <h5>
                     <strong>Curated restaurants</strong>{" "}
                   </h5>
@@ -25,7 +28,7 @@ const Footer = () => {
                 <article>
                   <img
                     style={{ width: "150px", height: "150px" }}
-                    src="src/assets/ilus-cool-features-app.svg"
+                    src="https://food.grab.com/static/images/ilus-cool-features-app.svg"
                   />
                   <h5>
                     <strong>More cool features available on the app</strong>{" "}
@@ -42,8 +45,8 @@ const Footer = () => {
                     justifyContent: "space-between",
                   }}
                 >
-                  <img src="src/assets/logo-appstore.svg" />
-                  <img src="src/assets/logo-playstore.svg" />
+                  <img src="https://food.grab.com/static/images/logo-appstore.svg" />
+                  <img src="https://food.grab.com/static/images/logo-playstore.svg" />
                 </div>
               </div>
             </div>
@@ -52,10 +55,7 @@ const Footer = () => {
       </div>
       <div style={{ background: "#00b14f", padding: "30px 0" }}>
         <div className="container">
-          <img
-            style={{ width: "173px", height: "auto" }}
-            src="src/assets/logo-grabfood-white.svg"
-          />
+          <img style={{ width: "173px", height: "auto" }} src={logo} />
           <hr style={{ margin: "20px", color: "white" }}></hr>
           <div class="container text-center">
             <div
@@ -78,15 +78,9 @@ const Footer = () => {
                 </a>
               </div>
               <div class="col" style={{ padding: "0 10px" }}>
-                <img
-                  src="src/assets/facebook.png"
-                  style={{ marginRight: "20px" }}
-                />
-                <img
-                  src="src/assets/instagram.png"
-                  style={{ marginRight: "20px" }}
-                />
-                <img src="src/assets/twitter.png" />
+                <img src={fb} style={{ marginRight: "20px" }} />
+                <img src={ig} style={{ marginRight: "20px" }} />
+                <img src={tw} alt="" />
               </div>
             </div>
             <div
@@ -132,10 +126,10 @@ const Footer = () => {
                     display: "flex",
                   }}
                 >
-                  <img src="src/assets/logo-appstore.svg" />
+                  <img src="https://food.grab.com/static/images/logo-appstore.svg" />
                   <img
                     style={{ marginLeft: "20px" }}
-                    src="src/assets/logo-playstore.svg"
+                    src="https://food.grab.com/static/images/logo-playstore.svg"
                   />
                 </div>
               </div>

@@ -1,5 +1,5 @@
 import React from "react";
-
+import plus from "../assets/plus-white.svg";
 function MealDetail(prop) {
   return (
     <>
@@ -34,7 +34,7 @@ function MealDetail(prop) {
                 className="round-button"
                 onClick={() => setIsOpen(!isOpen)}
               >
-                <img src="src/assets/plus-white.svg" />
+                <img src={plus} />
               </button>
             </div>
           </div>

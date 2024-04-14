@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "./Header";
 import "./Design.css";
+import { Link } from "react-router-dom";
 
 const Restaurant = () => {
   return (
@@ -163,7 +164,7 @@ const Restaurant = () => {
                     fontWeight: "300",
                   }}
                 >
-                  Dổi vị món tối
+                  Đổi vị món tối
                 </p>
               </div>
             </a>
@@ -180,7 +181,7 @@ const Restaurant = () => {
           >
             <a href="#">
               <img
-                src="src/assets/placeholder-restaurant-2by1.jpg"
+                src="https://food.grab.com/static/images/placeholder-restaurant-2by1.jpg"
                 className="card-img-top"
                 alt="..."
                 style={{
@@ -317,14 +318,14 @@ const Restaurant = () => {
         >
           <ol className="breadcrumb">
             <li className="breadcrumb-item">
-              <a style={{ textDecoration: "none", color: "#00a5cf" }} href="#">
+              <Link style={{ textDecoration: "none", color: "#00a5cf" }} to="/">
                 Home
-              </a>
+              </Link>
             </li>
             <li className="breadcrumb-item">
-              <a style={{ textDecoration: "none", color: "#00a5cf" }} href="#">
+              <Link style={{ textDecoration: "none", color: "#00a5cf" }} to="/">
                 Cuisine
-              </a>
+              </Link>
             </li>
             <li
               style={{ color: "black" }}
@@ -340,7 +341,7 @@ const Restaurant = () => {
         </h1>
         <div className="containerCard">
           <div className="card" style={{ width: "280px", border: 0 }}>
-            <a className="link" href="#">
+            <Link className="link" to="/detail">
               <img
                 src="src/assets/card1.webp"
                 className="card-img-top"
@@ -369,11 +370,11 @@ const Restaurant = () => {
                 />
                 Ưu đãi đến 46k
               </div>
-            </a>
+            </Link>
           </div>
 
           <div className="card" style={{ width: "280px", border: 0 }}>
-            <a className="link" href="#">
+            <Link className="link" href="/detail">
               <img
                 src="src/assets/cardMaycha.webp"
                 className="card-img-top"
@@ -402,11 +403,11 @@ const Restaurant = () => {
                 />
                 Ưu đãi đến 34k
               </div>
-            </a>
+            </Link>
           </div>
 
           <div className="card" style={{ width: "280px", border: 0 }}>
-            <a className="link" href="#">
+            <Link className="link" to="/detail">
               <img
                 src="src/assets/cardMac.webp"
                 className="card-img-top"
@@ -435,11 +436,11 @@ const Restaurant = () => {
                 />
                 🔥50K off, Combo Trưa Chỉ 40K
               </div>
-            </a>
+            </Link>
           </div>
 
           <div className="card" style={{ width: "280px", border: 0 }}>
-            <a className="link" href="#">
+            <Link className="link" to="/detail">
               <img
                 src="src/assets/cardPLT.webp"
                 className="card-img-top"
@@ -468,7 +469,7 @@ const Restaurant = () => {
                 />
                 Ưu đãi đến 15k
               </div>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

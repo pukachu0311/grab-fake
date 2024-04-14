@@ -238,3 +238,32 @@ p{
 .drawer-container.open {
   transform: translateX(0);
 }
+.btnQty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 100%; /* Rộng bằng drawer */
+  position: absolute;
+  bottom: 0; /* Đặt ở dưới cùng */
+}
+.btnMP{
+  border: 1px solid #c3c3c3;
+  border-radius: 5px;
+  background-color:white ;
+  color:#00a5cf;
+  width: 30px;
+  height: 30px;
+}
+#total{
+  background-color: #00b14f;
+  height: 40px;
+  border-radius: 10px;
+  text-align: center;
+  color:white;
+  font-size: medium;
+  font-weight: 600;
+  margin-bottom: 10px ;
+  border: none;
+}
+

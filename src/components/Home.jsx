@@ -2,7 +2,6 @@ import React from "react";
 import Navbar from "./Header";
 import Info from "./Information";
 import SearchBox from "./SearchBox";
-import Promo from "./Promo";
 import Promo2 from "./Promo2";
 import "./Design.css";
 import Footer from "./Footer";

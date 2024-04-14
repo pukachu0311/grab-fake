@@ -1,6 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Design.css";
+import food1 from "../assets/card1.webp";
+import food2 from "../assets/cardMaycha.webp";
+import food3 from "../assets/CardMac.webp";
+import food4 from "../assets/CardPLT.webp";
+import star from "../assets/icon-star.svg";
+import clock from "../assets/icon-star.svg";
+import fullstop from "../assets/full-stop.png";
+import promo from "../assets/icon-promo-tag.svg";
 
 const ListData = [
   {
@@ -10,7 +18,7 @@ const ListData = [
     time: 25,
     distance: 2.2,
     promo: "Ưu đãi đến 46k",
-    image: "src/assets/card1.webp",
+    image: food1,
   },
   {
     title: "Trà Sữa MayCha - Trịnh Đình Trọng",
@@ -19,7 +27,7 @@ const ListData = [
     time: 15,
     distance: 0.6,
     promo: "Ưu đãi đến 34k",
-    image: "src/assets/cardMaycha.webp",
+    image: food2,
   },
   {
     title: "McDonald's - Âu Cơ",
@@ -28,7 +36,7 @@ const ListData = [
     time: 15,
     distance: 2,
     promo: "🔥50K off, Combo Trưa Chỉ 40K",
-    image: "src/assets/CardMac.webp",
+    image: food3,
   },
   {
     title: "Cơm Tấm Phúc Lộc Thọ - Huỳnh Thiện Lộc",
@@ -37,7 +45,7 @@ const ListData = [
     time: 15,
     distance: 1,
     promo: "Ưu đãi đến 15k",
-    image: "src/assets/cardPLT.webp",
+    image: food4,
   },
 ];
 const TypeData = [
@@ -157,17 +165,11 @@ const Promo = () => {
                   {item.category}
                 </p>
                 <p className="info">
-                  <img src="src/assets/icon-star.svg" alt="Star Icon" />{" "}
-                  {item.stars}
-                  <img src="src/assets/icon-clock.svg" alt="Clock Icon" />{" "}
-                  {item.time} mins
-                  <img src="src/assets/full-stop.png" /> {item.distance} km
+                  <img src={star} alt="Star Icon" /> {item.stars}
+                  <img src={clock} alt="Clock Icon" /> {item.time} mins
+                  <img src={fullstop} /> {item.distance} km
                 </p>
-                <img
-                  className="promo"
-                  src="src/assets/icon-promo-tag.svg"
-                  style={{ padding: 0 }}
-                />
+                <img className="promo" src={promo} style={{ padding: 0 }} />
                 {item.promo}
               </div>
             </Link>
@@ -190,14 +192,14 @@ const Promo = () => {
               className="card"
               style={{ width: "280px", border: 0 }}
             >
-              <a className="link" href="#">
+              <Link className="link" to="/restaurant">
                 <img src={item.image} className="card-img-top" alt="..." />
                 <div className="card-body" style={{ padding: 0 }}>
                   <h5 className="card-title" style={{ paddingTop: "10px" }}>
                     {item.title}
                   </h5>
                 </div>
-              </a>
+              </Link>
             </div>
           ))}
         </div>

@@ -1,33 +1,16 @@
-import Navbar from "./Header";
-import "./Design.css";
 import React, { useState } from "react";
-
-const Drawer = ({ isOpen, onClose, meal }) => {
-  if (!isOpen) return null;
-
-  return (
-    <div className="drawer-container">
-      <div className="drawer-content">
-        <button className="drawer-close" onClick={onClose}>
-          Close
-        </button>
-        <h2>{meal.title}</h2>
-        <p>{meal.description}</p>
-        <p>{meal.price}</p>
-      </div>
-    </div>
-  );
-};
+import { Drawer } from "antd";
 
 const DetailMeal = () => {
+  const [visible, setVisible] = useState(false);
   const [selectedMeal, setSelectedMeal] = useState(null);
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const [quantity, setQuantity] = useState(1);
 
   const mealsData = [
     {
       title: "Combo Rice With Chicken Thigh Includes Coca Coca 50% Off",
       description: "Mỗi phần ăn bao gồm 01 bịch tương ớt, 01 bịch nước tương.",
-      price: "28.000",
+      price: 28000,
       imageSrc:
         "src/assets/menueditor_item_2c3ab67abac047f78a89890b32ac32c5_1708761727475972298.webp",
     },
@@ -35,14 +18,14 @@ const DetailMeal = () => {
       title: "Combo Rice With Chicken Thigh And Sauce",
       description:
         "Combo Includes Chicken Thigh Rice With Optional Sauce And Cold Seaweed Soup",
-      price: "45.750",
+      price: 45750,
       imageSrc:
         "https://food-cms.grab.com/compressed_webp/items/VNITE2024020610441903248/detail/menueditor_item_85427b70d75840c7bc76d341bd3635a8_1708608269260714876.webp",
     },
     {
       title: "Rice With Grilled Pork",
       description: "Mỗi phần ăn bao gồm 01 bịch tương ớt, 01 bịch nước tương.",
-      price: "35.000",
+      price: 35000,
       imageSrc:
         "https://food-cms.grab.com/compressed_webp/items/VNITE2024020304250857510/detail/menueditor_item_07b32cc0e2f84eca92996ac4db79b06f_1706934294696427230.webp",
     },
@@ -50,19 +33,30 @@ const DetailMeal = () => {
       title: "Rice With Chicken Thigh Without Sauce",
       description:
         "Combo Includes Chicken Thigh Rice With Optional Sauce And Cold Seaweed Soup",
-      price: "45.750",
+      price: 45750,
       imageSrc:
         "https://food-cms.grab.com/compressed_webp/items/VNITE2024020303512252464/detail/menueditor_item_4c0e6f1a3f9d4a498ef98ba6203eaf2a_1706953593181323001.webp",
     },
   ];
 
-  const handleClick = (index) => {
-    setSelectedMeal(meals[index]);
-    setIsDrawerOpen(true);
+  const handleClick = (meal) => {
+    setSelectedMeal(meal);
+    setQuantity(1); // Reset số lượng về 1 mỗi khi chọn sản phẩm mới
+    setVisible(true);
   };
 
   const closeDrawer = () => {
-    setIsDrawerOpen(false);
+    setVisible(false);
+  };
+
+  const handleIncreaseQuantity = () => {
+    setQuantity(quantity + 1);
+  };
+
+  const handleDecreaseQuantity = () => {
+    if (quantity > 1) {
+      setQuantity(quantity - 1);
+    }
   };
 
   return (
@@ -106,7 +100,7 @@ const DetailMeal = () => {
                   </div>
                   <button
                     className="round-button"
-                    onClick={() => handleClick(index)}
+                    onClick={() => handleClick(meal)}
                   >
                     <img src="src/assets/plus-white.svg" alt="Add" />
                   </button>
@@ -116,7 +110,71 @@ const DetailMeal = () => {
           </div>
         ))}
       </div>
-      <Drawer isOpen={isDrawerOpen} onClose={closeDrawer} meal={selectedMeal} />
+      <Drawer
+        width={600}
+        visible={visible}
+        closable={false}
+        onClose={closeDrawer}
+      >
+        {selectedMeal && (
+          <div className="card" style={{ width: "100%" }}>
+            <div className="row g-0">
+              <div className="col-md-4">
+                <img
+                  src={selectedMeal.imageSrc}
+                  alt=""
+                  style={{
+                    margin: "15px",
+                    maxWidth: "100%",
+                    maxHeight: "100%",
+                  }}
+                />
+              </div>
+              <div className="col-md-8">
+                <div
+                  className="card-body"
+                  style={{ textAlign: "left", marginLeft: "5px" }}
+                >
+                  <h2>{selectedMeal.title}</h2>
+                  <p>{selectedMeal.description}</p>
+                  <p>{selectedMeal.price}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+        <div className="btnQty">
+          <div className="container text-center">
+            <div className="row align-items-start">
+              <div
+                className="col col-3"
+                style={{ justifyContent: "space-between", display: "flex" }}
+              >
+                <button className="btnMP" onClick={handleDecreaseQuantity}>
+                  -
+                </button>
+                <span style={{ fontSize: 20, margin: "0 10px" }}>
+                  {quantity}
+                </span>{" "}
+                {/* Khoảng trống ở đây */}
+                <button className="btnMP" onClick={handleIncreaseQuantity}>
+                  +
+                </button>
+              </div>
+              <div className="col col-7">
+                <button
+                  type="button"
+                  className="btn btn-success"
+                  style={{ width: "100%" }}
+                >
+                  {selectedMeal &&
+                    `Add to Basket - ${selectedMeal.price * quantity} ₫`}
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </Drawer>
     </div>
   );
 };
