@@ -2,7 +2,15 @@ import React from "react";
 import Navbar from "./Header";
 import "./Design.css";
 import { Link } from "react-router-dom";
-
+import Search from "src/assets/search.png";
+import star from "../assets/icon-star.svg";
+import clock from "../assets/icon-star.svg";
+import fullstop from "../assets/full-stop.png";
+import promo from "../assets/icon-promo-tag.svg";
+import food1 from "../assets/card1.webp";
+import food2 from "../assets/cardMaycha.webp";
+import food3 from "../assets/CardMac.webp";
+import food4 from "../assets/CardPLT.webp";
 const Restaurant = () => {
   return (
     <div>
@@ -19,7 +27,7 @@ const Restaurant = () => {
             id="inputGroup-sizing-default"
             style={{ border: 0, borderRadius: " 50px 0 0 50px " }}
           >
-            <img src="src/assets/search.png" alt="Search icon" />
+            <img src={Search} alt="Search icon" />
           </span>
           <input
             type="text"
@@ -91,7 +99,7 @@ const Restaurant = () => {
           >
             <a href="#">
               <img
-                src="src/assets/placeholder-restaurant-2by1.jpg"
+                src="https://food.grab.com/static/images/placeholder-restaurant-2by1.jpg"
                 className="card-img-top"
                 alt="..."
                 style={{
@@ -136,7 +144,7 @@ const Restaurant = () => {
           >
             <a href="#">
               <img
-                src="src/assets/placeholder-restaurant-2by1.jpg"
+                src="https://food.grab.com/static/images/placeholder-restaurant-2by1.jpg"
                 className="card-img-top"
                 alt="..."
                 style={{
@@ -226,7 +234,7 @@ const Restaurant = () => {
           >
             <a href="#">
               <img
-                src="src/assets/placeholder-restaurant-2by1.jpg"
+                src="https://food.grab.com/static/images/placeholder-restaurant-2by1.jpg"
                 className="card-img-top"
                 alt="..."
                 style={{
@@ -271,7 +279,7 @@ const Restaurant = () => {
           >
             <a href="#">
               <img
-                src="src/assets/placeholder-restaurant-2by1.jpg"
+                src="https://food.grab.com/static/images/placeholder-restaurant-2by1.jpg"
                 className="card-img-top"
                 alt="..."
                 style={{
@@ -342,11 +350,7 @@ const Restaurant = () => {
         <div className="containerCard">
           <div className="card" style={{ width: "280px", border: 0 }}>
             <Link className="link" to="/detail">
-              <img
-                src="src/assets/card1.webp"
-                className="card-img-top"
-                alt="..."
-              />
+              <img src={food1} className="card-img-top" alt="..." />
               <div className="card-body" style={{ padding: 0 }}>
                 <h5 className="card-title" style={{ paddingTop: "10px" }}>
                   Trạm Cơm Gà - 24H Station
@@ -358,16 +362,11 @@ const Restaurant = () => {
                   Rice
                 </p>
                 <p className="info">
-                  <img src="src/assets/icon-star.svg" alt="Star Icon" /> 4.8
-                  <img src="src/assets/icon-clock.svg" alt="Clock Icon" /> 25
-                  mins
-                  <img src="src/assets/full-stop.png" /> 2.2 km
+                  <img src={star} alt="Star Icon" /> 4.8
+                  <img src={clock} alt="Clock Icon" /> 25 mins
+                  <img src={fullstop} /> 2.2 km
                 </p>
-                <img
-                  className="promo"
-                  src="src/assets/icon-promo-tag.svg"
-                  style={{ padding: 0 }}
-                />
+                <img className="promo" src={promo} style={{ padding: 0 }} />
                 Ưu đãi đến 46k
               </div>
             </Link>
@@ -375,11 +374,7 @@ const Restaurant = () => {
 
           <div className="card" style={{ width: "280px", border: 0 }}>
             <Link className="link" href="/detail">
-              <img
-                src="src/assets/cardMaycha.webp"
-                className="card-img-top"
-                alt="..."
-              />
+              <img src={food2} className="card-img-top" alt="..." />
               <div className="card-body" style={{ padding: 0 }}>
                 <h5 className="card-title" style={{ paddingTop: "10px" }}>
                   Trà Sữa MayCha - Trịnh Đình Trọng
@@ -391,16 +386,11 @@ const Restaurant = () => {
                   Milk Tea
                 </p>
                 <p className="info">
-                  <img src="src/assets/icon-star.svg" alt="Star Icon" /> 4.4
-                  <img src="src/assets/icon-clock.svg" alt="Clock Icon" /> 15
-                  mins
-                  <img src="src/assets/full-stop.png" /> 0.6 km
+                  <img src={star} alt="Star Icon" /> 4.4
+                  <img src={clock} alt="Clock Icon" /> 15 mins
+                  <img src={fullstop} /> 0.6 km
                 </p>
-                <img
-                  className="promo"
-                  src="src/assets/icon-promo-tag.svg"
-                  style={{ padding: 0 }}
-                />
+                <img className="promo" src={promo} style={{ padding: 0 }} />
                 Ưu đãi đến 34k
               </div>
             </Link>
@@ -408,11 +398,7 @@ const Restaurant = () => {
 
           <div className="card" style={{ width: "280px", border: 0 }}>
             <Link className="link" to="/detail">
-              <img
-                src="src/assets/cardMac.webp"
-                className="card-img-top"
-                alt="..."
-              />
+              <img src={food3} className="card-img-top" alt="..." />
               <div className="card-body" style={{ padding: 0 }}>
                 <h5 className="card-title" style={{ paddingTop: "10px" }}>
                   McDonald's - Bến Thành
@@ -424,16 +410,11 @@ const Restaurant = () => {
                   Fast Food, Rice, International Food
                 </p>
                 <p className="info">
-                  <img src="src/assets/icon-star.svg" alt="Star Icon" /> 4.4
-                  <img src="src/assets/icon-clock.svg" alt="Clock Icon" /> 35
-                  mins
-                  <img src="src/assets/full-stop.png" /> 7.6 km
+                  <img src={star} alt="Star Icon" /> 4.4
+                  <img src={clock} alt="Clock Icon" /> 35 mins
+                  <img src={fullstop} /> 7.6 km
                 </p>
-                <img
-                  className="promo"
-                  src="src/assets/icon-promo-tag.svg"
-                  style={{ padding: 0 }}
-                />
+                <img className="promo" src={promo} style={{ padding: 0 }} />
                 🔥50K off, Combo Trưa Chỉ 40K
               </div>
             </Link>
@@ -441,11 +422,7 @@ const Restaurant = () => {
 
           <div className="card" style={{ width: "280px", border: 0 }}>
             <Link className="link" to="/detail">
-              <img
-                src="src/assets/cardPLT.webp"
-                className="card-img-top"
-                alt="..."
-              />
+              <img src={food4} className="card-img-top" alt="..." />
               <div className="card-body" style={{ padding: 0 }}>
                 <h5 className="card-title" style={{ paddingTop: "10px" }}>
                   Cơm Tấm Phúc Lộc Thọ - Huỳnh Thiện Lộc
@@ -457,16 +434,11 @@ const Restaurant = () => {
                   Rice
                 </p>
                 <p className="info">
-                  <img src="src/assets/icon-star.svg" alt="Star Icon" /> 4.1
-                  <img src="src/assets/icon-clock.svg" alt="Clock Icon" /> 15
-                  mins
-                  <img src="src/assets/full-stop.png" /> 1 km
+                  <img src={star} alt="Star Icon" /> 4.1
+                  <img src={clock} alt="Clock Icon" /> 15 mins
+                  <img src={fullstop} /> 1 km
                 </p>
-                <img
-                  className="promo"
-                  src="src/assets/icon-promo-tag.svg"
-                  style={{ padding: 0 }}
-                />
+                <img className="promo" src={promo} style={{ padding: 0 }} />
                 Ưu đãi đến 15k
               </div>
             </Link>
