@@ -69,7 +69,7 @@ const Navbar = () => {
                 role="button"
                 data-bs-toggle="dropdown"
               >
-                Language
+                EN
               </a>
             </button>
           </div>

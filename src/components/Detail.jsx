@@ -5,6 +5,12 @@ import DetailMeal from "./DetailMeal";
 import Footer from "./Footer";
 import { Link } from "react-router-dom";
 import { Tabs } from "antd";
+import star from "../assets/icon-star.svg";
+import clock from "../assets/icon-star.svg";
+import fullstop from "../assets/full-stop.png";
+import promo from "../assets/icon-promo-tag.svg";
+import next from "../assets/icon-next.svg";
+import plus from "../assets/plus-white.svg";
 const Detail = () => {
   return (
     <main>
@@ -14,7 +20,7 @@ const Detail = () => {
           style={{
             marginLeft: "40px",
             marginTop: "100px",
-            "--bs-breadcrumb-divider": 'url("src/assets/icon-next.svg")',
+            "--bs-breadcrumb-divider": "url({next})",
           }}
           aria-label="breadcrumb"
         >
@@ -50,22 +56,18 @@ const Detail = () => {
             Rice
           </p>
           <p className="info" style={{ width: "300px", height: "50px" }}>
-            <img src="src/assets/icon-star.svg" alt="Star Icon" /> 4.8
-            <img src="src/assets/icon-clock.svg" alt="Clock Icon" /> 25 mins
-            <img src="src/assets/full-stop.png" /> 2.2 km
+            <img src={star} alt="Star Icon" /> 4.8
+            <img src={clock} alt="Clock Icon" /> 25 mins
+            <img src={fullstop} /> 2.2 km
           </p>
           <p>
             <strong>Opening Hour</strong> &emsp; Today 00:00-02:00 07:00-23:59
           </p>
-          <img
-            className="promo"
-            src="src/assets/icon-promo-tag.svg"
-            style={{ padding: 0 }}
-          />
+          <img className="promo" src={promo} style={{ padding: 0 }} />
           <p>Get a free Kem Oreo Phô mai with 149.000₫ min. order</p>
           <img
             className="promo"
-            src="src/assets/icon-promo-tag.svg"
+            src={promo}
             style={{ padding: 0, margin: 0 }}
           />
           <p>15.000₫ off delivery fee with 200.000₫ min. order</p>

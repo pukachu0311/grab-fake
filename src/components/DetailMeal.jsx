@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Drawer } from "antd";
+import plus from "../assets/plus-white.svg";
 
 const DetailMeal = () => {
   const [visible, setVisible] = useState(false);
@@ -41,7 +42,7 @@ const DetailMeal = () => {
 
   const handleClick = (meal) => {
     setSelectedMeal(meal);
-    setQuantity(1); // Reset số lượng về 1 mỗi khi chọn sản phẩm mới
+    setQuantity(1);
     setVisible(true);
   };
 
@@ -102,7 +103,7 @@ const DetailMeal = () => {
                     className="round-button"
                     onClick={() => handleClick(meal)}
                   >
-                    <img src="src/assets/plus-white.svg" alt="Add" />
+                    <img src={plus} alt="Add" />
                   </button>
                 </div>
               </div>
@@ -155,8 +156,7 @@ const DetailMeal = () => {
                 </button>
                 <span style={{ fontSize: 20, margin: "0 10px" }}>
                   {quantity}
-                </span>{" "}
-                {/* Khoảng trống ở đây */}
+                </span>
                 <button className="btnMP" onClick={handleIncreaseQuantity}>
                   +
                 </button>
