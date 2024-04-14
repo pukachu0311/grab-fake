@@ -1,0 +1,240 @@
+* { 
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family:Arial, Helvetica, sans-serif ;
+}
+
+.mainContainer{
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-flex: 1;
+    flex: auto;
+    background: transparent;
+
+}
+h1{
+  text-align: left;
+}
+p{
+  text-align: left;
+}
+ .header{
+    height: 90px;
+    width: 100%;
+    position:fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.header-bg{
+    background-color:white;
+} 
+
+
+.logo2 {
+    margin-left: 30px;;
+    width: 150px;
+    height: 80px;
+}
+.link {
+    text-decoration: none;
+    color: inherit;
+}
+.button{
+    float: right;
+   
+}
+#button{
+    background-color: white;
+    margin-left: 15px;
+    border: none;
+}
+.button:hover #button {
+    background-color: white;
+    border: none;
+}
+.background {
+    width: 100%;
+    height: 52vh;
+    background-size: cover;
+    position: relative; 
+    background-repeat: no-repeat;
+    object-fit: cover;
+    background-position: 50%;
+    z-index: -1;
+}
+ .searchContainer {
+    width: 360px;
+    min-height: 398px;
+    position: absolute;
+    top: 16vh;
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 24px;
+    margin: 0 40px;
+    border: 1px solid #e5e9f0;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;;
+    z-index: 2;
+ }
+
+ #textBox{
+    font-size: 35px;
+    font-weight: 700;
+    text-align: left; 
+ }
+ #icon{
+    height: 25px;
+    width: 25px;
+ }
+ .location-input { 
+    border: 0.5px solid rgb(201, 196, 196); 
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    justify-content: space-between;
+  }
+  .location-input:hover {
+    border: 1px solid green; /* Thiết lập viền xanh */
+    padding: 10px; /* Tăng độ dày của viền */
+  }
+  #search-input {
+    border: 0; /* Đặt border mặc định là không có */
+    outline: none; /* Loại bỏ đường viền focus mặc định */
+  }
+  
+  #search-input:focus {
+    border: 0; 
+  }
+  #btnSearch{
+    padding:10px ;
+    background-color: #00b14f;
+    border-color:#00b14f;
+    margin-top: 10px;
+  }
+
+ .containerCard {
+  text-align: left;
+    margin: 0 20px;
+    margin-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; 
+}
+
+.card {
+    margin-bottom: 20px;  
+  }
+ 
+.card-title{
+    
+    font-size: large;
+    font-weight: bold;
+}  
+
+.info { 
+    margin: 0;
+    word-wrap: break-word;
+    color: #707070;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  #see-all{
+    font-size: 14px;
+    padding:10px;
+    background-color: #fff;
+    border: 1px solid #707070;
+    color: #707070;
+    font-weight: bold;
+
+    margin-top: 10px;
+  }
+  #see-all:hover {
+    border: 1px solid #00b14f; /* Màu viền khi hover */
+    color: #00b14f; /* Màu chữ khi hover */
+}
+.containerCard2 {
+    margin: 0 20px;
+    margin-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between; /* Sử dụng justify-content: flex-start */
+}
+
+
+#tick{
+    height: 15px;
+    width: 15px;
+    margin-right: 5px;
+ }
+ section{
+    font-size: 15px;
+    margin-top: 20px;
+    margin-left:  20px ;
+ }
+ .hidden{
+    display: none;
+ }
+ .promo{
+  float: left;
+ }
+ .containerCard3 {
+  margin:  20px 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; 
+}
+.card:hover {
+  border: 3px solid #00b14f;
+}
+.round-button {
+  position: absolute;
+  bottom: 10px; /* Điều chỉnh vị trí top theo ý muốn */
+  right: 10px; /* Điều chỉnh vị trí right theo ý muốn */
+  width: 30px; /* Chiều rộng của nút */
+  height: 30px; /* Chiều cao của nút */
+  border-radius: 50%; /* Tạo nút hình tròn */
+  background-color: #00b14f; /* Màu nền của nút */
+  color: #fff; /* Màu chữ của nút */
+  border: none; /* Xóa viền */
+  cursor: pointer; /* Biến con trỏ thành hình bàn tay khi di chuột qua nút */
+  font-size: 16px; /* Cỡ chữ */
+}
+.drawer-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  background-color: white;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(100%);
+}
+
+.drawer-content {
+  padding: 20px;
+}
+
+.drawer-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.drawer-container.open {
+  transform: translateX(0);
+}
