@@ -13,7 +13,7 @@ const DetailMeal = () => {
       description: "Mỗi phần ăn bao gồm 01 bịch tương ớt, 01 bịch nước tương.",
       price: 28000,
       imageSrc:
-        "src/assets/menueditor_item_2c3ab67abac047f78a89890b32ac32c5_1708761727475972298.webp",
+        "https://food-cms.grab.com/compressed_webp/items/VNITE2024020610441903248/detail/menueditor_item_85427b70d75840c7bc76d341bd3635a8_1708608269260714876.webp",
     },
     {
       title: "Combo Rice With Chicken Thigh And Sauce",
