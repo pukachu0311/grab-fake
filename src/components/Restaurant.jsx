@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "./Header";
 import "./Design.css";
 import { Link } from "react-router-dom";
-import Search from "src/assets/search.png";
+import search from "src/assets/search.png";
 import star from "../assets/icon-star.svg";
 import clock from "../assets/icon-star.svg";
 import fullstop from "../assets/full-stop.png";
@@ -27,7 +27,7 @@ const Restaurant = () => {
             id="inputGroup-sizing-default"
             style={{ border: 0, borderRadius: " 50px 0 0 50px " }}
           >
-            <img src={Search} alt="Search icon" />
+            <img src={search} alt="Search icon" />
           </span>
           <input
             type="text"
