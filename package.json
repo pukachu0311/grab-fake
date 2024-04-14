@@ -1,7 +1,7 @@
 {
   "homepage": "https://pukachu0311.github.io/grab-fake",
   "name": "grab-new",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
