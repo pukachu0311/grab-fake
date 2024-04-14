@@ -9,11 +9,10 @@ function App() {
     <>
       <div className="mainContainer">
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/grab-fake" element={<Home />} />
           <Route path="/restaurant" element={<Restaurant />} />
           <Route path="/detail" element={<Detail />} />
         </Routes>
-        {/* <TemporaryDrawer /> */}
       </div>
     </>
   );

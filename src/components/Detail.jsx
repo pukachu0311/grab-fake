@@ -20,12 +20,18 @@ const Detail = () => {
         >
           <ol className="breadcrumb">
             <li className="breadcrumb-item">
-              <Link style={{ textDecoration: "none", color: "#00a5cf" }} to="/">
+              <Link
+                style={{ textDecoration: "none", color: "#00a5cf" }}
+                to="/grab-fake"
+              >
                 Home
               </Link>
             </li>
             <li className="breadcrumb-item">
-              <Link style={{ textDecoration: "none", color: "#00a5cf" }} to="/">
+              <Link
+                style={{ textDecoration: "none", color: "#00a5cf" }}
+                to="/restaurant"
+              >
                 Cuisine
               </Link>
             </li>
