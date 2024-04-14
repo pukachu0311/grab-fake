@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Design.css";
+import tick from "../assets/tick.svg";
 
 const Info = () => {
   const [showMore, setShowMore] = useState(false);
@@ -15,29 +16,29 @@ const Info = () => {
       </h1>
       <section>
         <p>
-          <img id="tick" src="src/assets/tick.svg"></img>
+          <img id="tick" src={tick}></img>
           <strong>Quickest</strong>- GrabFood provides the fastest food delivery
           in the market.
         </p>
         <p>
-          <img id="tick" src="src/assets/tick.svg"></img>
+          <img id="tick" src={tick}></img>
           <strong>Easiest</strong> - Now grabbing your food is just a few clicks
           or taps away. Order online or download our Grab super app for a faster
           and more rewarding experience.
         </p>
         <p>
-          <img id="tick" src="src/assets/tick.svg"></img>
+          <img id="tick" src={tick}></img>
           <strong>Food for all cravings</strong>- From local fare to restaurant
           favourites, our wide selection of food will definitely satisfy all
           your cravings
         </p>
         <p>
-          <img id="tick" src="src/assets/tick.svg"></img>
+          <img id="tick" src={tick}></img>
           <strong>Pay with ease</strong>- It’s easy to get your meals delivered
           to you. It’s even easier to pay for it with GrabPay.
         </p>
         <p>
-          <img id="tick" src="src/assets/tick.svg"></img>
+          <img id="tick" src={tick}></img>
           <strong>More Rewarding</strong>- earn GrabRewards points for every
           order you make and use them to redeem more goodies.
         </p>
