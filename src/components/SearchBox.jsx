@@ -12,7 +12,7 @@ const SearchBox = () => {
       ></img>
       <div className="container">
         <div className="searchContainer">
-          <h5>
+          <h5 style={{ textAlign: "left" }}>
             <strong>Good Afternoon</strong>
           </h5>
           <h1 id="textBox">Where should we deliver your food today?</h1>

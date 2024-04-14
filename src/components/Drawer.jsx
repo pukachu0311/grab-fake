@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
+import { Button, Drawer } from "antd";
 
-const Drawer = ({ isOpen, onClose, meal }) => {
+function Drawer({ isOpen, onClose, meal }) {
+  const [visible, setVisible] = useState(false);
   if (!isOpen || !meal) return null;
 
   return (
-    <div className="drawer-container">
+    <Drawer
+      className="drawer-container"
+      visible={visible}
+      onClose={() => setVisible(false)}
+    >
       <div className="drawer-content">
         <button className="drawer-close" onClick={onClose}>
           Close
@@ -14,8 +20,8 @@ const Drawer = ({ isOpen, onClose, meal }) => {
         <p>{meal.description}</p>
         <p>{meal.price}</p>
       </div>
-    </div>
+    </Drawer>
   );
-};
+}
 
 export default Drawer;

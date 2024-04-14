@@ -55,16 +55,6 @@ const DetailMeal = () => {
         "https://food-cms.grab.com/compressed_webp/items/VNITE2024020303512252464/detail/menueditor_item_4c0e6f1a3f9d4a498ef98ba6203eaf2a_1706953593181323001.webp",
     },
   ];
-  const mealData2 = [
-    {
-      title: "Test",
-      description:
-        "Combo Includes Chicken Thigh Rice With Optional Sauce And Cold Seaweed Soup",
-      price: "45.750",
-      imageSrc:
-        "https://food-cms.grab.com/compressed_webp/items/VNITE2024020303512252464/detail/menueditor_item_4c0e6f1a3f9d4a498ef98ba6203eaf2a_1706953593181323001.webp",
-    },
-  ];
 
   const handleClick = (index) => {
     setSelectedMeal(meals[index]);
@@ -76,63 +66,57 @@ const DetailMeal = () => {
   };
 
   return (
-    <div style={{ background: "#f7f7f7" }}>
-      <div className="container">
-        <h1 className="fw-bold">Promotion Combo</h1>
-        <div className="row row-cols-1 row-cols-md-3 g-0">
-          {mealsData.map((meal, index) => (
-            <div key={index} className="col">
-              <div className="card" style={{ width: "385px", height: "210px" }}>
-                <div className="row g-0">
-                  <div className="col-md-4">
-                    <img
-                      src={meal.imageSrc}
-                      className="card-img"
-                      alt="Meal"
-                      style={{
-                        margin: "15px",
-                        maxWidth: "100%",
-                        maxHeight: "100%",
-                      }}
-                    />
-                  </div>
-                  <div className="col-md-8">
-                    <div
-                      className="card-body"
-                      style={{ textAlign: "left", marginLeft: "5px" }}
+    <div className="container">
+      <h1 className="fw-bold">Promotion Combo</h1>
+      <div className="row row-cols-1 row-cols-md-3 g-0">
+        {mealsData.map((meal, index) => (
+          <div key={index} className="col">
+            <div className="card" style={{ width: "385px", height: "210px" }}>
+              <div className="row g-0">
+                <div className="col-md-4">
+                  <img
+                    src={meal.imageSrc}
+                    className="card-img"
+                    alt="Meal"
+                    style={{
+                      margin: "15px",
+                      maxWidth: "100%",
+                      maxHeight: "100%",
+                    }}
+                  />
+                </div>
+                <div className="col-md-8">
+                  <div
+                    className="card-body"
+                    style={{ textAlign: "left", marginLeft: "5px" }}
+                  >
+                    <h5
+                      className="card-title"
+                      style={{ fontWeight: "300", fontSize: "16px" }}
                     >
-                      <h5
-                        className="card-title"
-                        style={{ fontWeight: "300", fontSize: "16px" }}
-                      >
-                        {meal.title}
-                      </h5>
-                      <p
-                        className="card-text"
-                        style={{ color: "#9a9a9a", fontSize: "15px" }}
-                      >
-                        {meal.description}
-                      </p>
-                      <p className="fw-500">{meal.price}</p>
-                    </div>
-                    <button
-                      className="round-button"
-                      onClick={() => handleClick(index)}
+                      {meal.title}
+                    </h5>
+                    <p
+                      className="card-text"
+                      style={{ color: "#9a9a9a", fontSize: "15px" }}
                     >
-                      <img src="src/assets/plus-white.svg" alt="Add" />
-                    </button>
+                      {meal.description}
+                    </p>
+                    <p className="fw-500">{meal.price}</p>
                   </div>
+                  <button
+                    className="round-button"
+                    onClick={() => handleClick(index)}
+                  >
+                    <img src="src/assets/plus-white.svg" alt="Add" />
+                  </button>
                 </div>
               </div>
             </div>
-          ))}
-        </div>
-        <Drawer
-          isOpen={isDrawerOpen}
-          onClose={closeDrawer}
-          meal={selectedMeal}
-        />
+          </div>
+        ))}
       </div>
+      <Drawer isOpen={isDrawerOpen} onClose={closeDrawer} meal={selectedMeal} />
     </div>
   );
 };

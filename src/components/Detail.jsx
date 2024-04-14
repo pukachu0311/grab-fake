@@ -20,18 +20,12 @@ const Detail = () => {
         >
           <ol className="breadcrumb">
             <li className="breadcrumb-item">
-              <Link
-                style={{ textDecoration: "none", color: "#00a5cf" }}
-                to="/home"
-              >
+              <Link style={{ textDecoration: "none", color: "#00a5cf" }} to="/">
                 Home
               </Link>
             </li>
             <li className="breadcrumb-item">
-              <Link
-                style={{ textDecoration: "none", color: "#00a5cf" }}
-                to="/home"
-              >
+              <Link style={{ textDecoration: "none", color: "#00a5cf" }} to="/">
                 Cuisine
               </Link>
             </li>
@@ -70,28 +64,29 @@ const Detail = () => {
           />
           <p>15.000₫ off delivery fee with 200.000₫ min. order</p>
         </div>
-      </div>
-      <div className="tabContainer">
-        <Tabs defaultActiveKey="tab1">
-          <Tabs.TabPane
-            tab={<span className="tab-title">Promotion Combo</span>}
-            key="tab1"
-          >
-            <DetailMeal />
-          </Tabs.TabPane>
-          <Tabs.TabPane
-            tab={<span className="tab-title">Bestseller Chicken Rice</span>}
-            key="tab2"
-          >
-            <DetailMeal />
-          </Tabs.TabPane>
-          <Tabs.TabPane
-            tab={<span className="tab-title">Món ăn kèm</span>}
-            key="tab3"
-          >
-            <div> This is a content of Tab3</div>
-          </Tabs.TabPane>
-        </Tabs>
+
+        <div className="tabContainer">
+          <Tabs defaultActiveKey="tab1">
+            <Tabs.TabPane
+              tab={<span className="tab-title">Promotion Combo</span>}
+              key="tab1"
+            >
+              <DetailMeal />
+            </Tabs.TabPane>
+            <Tabs.TabPane
+              tab={<span className="tab-title">Bestseller Chicken Rice</span>}
+              key="tab2"
+            >
+              <DetailMeal />
+            </Tabs.TabPane>
+            <Tabs.TabPane
+              tab={<span className="tab-title">Món ăn kèm</span>}
+              key="tab3"
+            >
+              <div> This is a content of Tab3</div>
+            </Tabs.TabPane>
+          </Tabs>
+        </div>
       </div>
     </main>
   );
